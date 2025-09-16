@@ -1,9 +1,9 @@
-import { config } from "@/config/config";
+import { config } from "./config/config";
 import cors from "cors";
 import express, { type Express } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
-import authRoutes from "@/routes/auth";
+import authRoutes from "./routes/auth";
 
 const app: Express = express();
 

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { verifyToken, extractTokenFromHeader, JWTPayload } from '@/utils/auth';
+import { verifyToken, extractTokenFromHeader, JWTPayload } from '../utils/auth';
 
 // Extend Request interface to include user
 declare global {

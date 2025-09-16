@@ -13,8 +13,7 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:migrate:prod": "ts-node prisma/migrate-prod.ts",
     "prisma:studio": "prisma studio",
-    "vercel-build": "pnpm prisma:generate && tsc && tsc-alias",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "vercel-build": "pnpm prisma:generate && tsc && tsc-alias"
   },
   "keywords": [],
   "author": "",

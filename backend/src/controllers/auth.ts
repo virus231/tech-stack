@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
-import { generateToken, hashPassword, comparePassword } from '@/utils/auth';
-import { RegisterRequest, LoginRequest, AuthResponse } from '@/types/auth';
+import { generateToken, hashPassword, comparePassword } from '../utils/auth';
+import { RegisterRequest, LoginRequest, AuthResponse } from '../types/auth';
 
 const prisma = new PrismaClient();
 
