@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/virus231/tech-stack/compare/v1.0.3...v1.0.4) (2025-09-16)
+
+### 🐛 Bug Fixes
+
+* vercel errors ([b876f83](https://github.com/virus231/tech-stack/commit/b876f8364df89e899b3de2f1198cb2e52f425d2c))
+
 ## [1.0.3](https://github.com/virus231/tech-stack/compare/v1.0.2...v1.0.3) (2025-09-16)
 
 ### 🐛 Bug Fixes
