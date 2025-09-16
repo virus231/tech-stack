@@ -1,4 +1,4 @@
-import { config as dotenvConfig } from 'dotenv';
+import { config as dotenvConfig } from "dotenv";
 
 // Load environment variables
 dotenvConfig();
@@ -12,15 +12,15 @@ interface Config {
 }
 
 export const config: Config = {
-  port: parseInt(process.env.PORT || '3000', 10),
-  nodeEnv: process.env.NODE_ENV || 'development',
-  databaseUrl: process.env.DATABASE_URL || '',
-  jwtSecret: process.env.JWT_SECRET || 'fallback-secret-key',
-  corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  port: parseInt(process.env.PORT || "3001", 10),
+  nodeEnv: process.env.NODE_ENV || "development",
+  databaseUrl: process.env.DATABASE_URL || "",
+  jwtSecret: process.env.JWT_SECRET || "fallback-secret-key",
+  corsOrigin: process.env.CORS_ORIGINS || "http://localhost:3000",
 };
 
 // Validate required environment variables
-const requiredEnvVars = ['DATABASE_URL'];
+const requiredEnvVars = ["DATABASE_URL"];
 
 for (const envVar of requiredEnvVars) {
   if (!process.env[envVar]) {
