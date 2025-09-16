@@ -11,7 +11,9 @@
     "db:down": "docker compose down",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
+    "prisma:migrate:prod": "ts-node prisma/migrate-prod.ts",
     "prisma:studio": "prisma studio",
+    "vercel-build": "pnpm prisma:generate && pnpm build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +21,8 @@
   "license": "ISC",
   "packageManager": "pnpm@10.8.0",
   "dependencies": {
+    "@prisma/client": "^6.16.1",
+    "@vercel/node": "^3.0.31",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
@@ -26,7 +30,6 @@
     "morgan": "^1.10.1"
   },
   "devDependencies": {
-    "@prisma/client": "^6.16.1",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/morgan": "^1.9.10",
