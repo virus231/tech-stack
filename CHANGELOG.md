@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/virus231/tech-stack/compare/v1.0.1...v1.0.2) (2025-09-16)
+
+### 🐛 Bug Fixes
+
+* config ([654ae13](https://github.com/virus231/tech-stack/commit/654ae1339e140a9cb4c6921366186f5aef5fabeb))
+
 ## [1.0.1](https://github.com/virus231/tech-stack/compare/v1.0.0...v1.0.1) (2025-09-16)
 
 ### 🐛 Bug Fixes
