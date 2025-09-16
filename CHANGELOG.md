@@ -1,3 +1,9 @@
+## [1.1.0-beta.5](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.4...v1.1.0-beta.5) (2025-09-16)
+
+### 🚨 Tests
+
+* fix api ([28c4ae3](https://github.com/virus231/tech-stack/commit/28c4ae364c1ef8ec09f65b83cb63ecf17ba15dca))
+
 ## [1.1.0-beta.4](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.3...v1.1.0-beta.4) (2025-09-16)
 
 ### 🚨 Tests
