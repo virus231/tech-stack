@@ -23,11 +23,6 @@
       "dest": "frontend/$1"
     }
   ],
-  "env": {
-    "DATABASE_URL": "@database_url",
-    "JWT_SECRET": "@jwt_secret",
-    "NODE_ENV": "production"
-  },
   "installCommand": "pnpm install",
   "buildCommand": "pnpm build",
   "outputDirectory": "frontend/.next"
