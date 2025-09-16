@@ -1,7 +1,11 @@
 {
   "branches": [
     "main",
-    "master"
+    "master",
+    {
+      "name": "develop",
+      "prerelease": "beta"
+    }
   ],
   "repositoryUrl": "https://github.com/your-username/tech-test",
   "plugins": [
