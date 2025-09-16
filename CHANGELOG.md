@@ -1,3 +1,13 @@
+## [1.1.0-beta.2](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2025-09-16)
+
+### ✨ Features
+
+* auth endpoints ([acefc83](https://github.com/virus231/tech-stack/commit/acefc83ea98a610d05f633845ac5ae51653c761c))
+
+### 🐛 Bug Fixes
+
+* type errors ([d4156b4](https://github.com/virus231/tech-stack/commit/d4156b47ee468b7ae2e352ff8767512a1204c51b))
+
 ## [1.1.0-beta.1](https://github.com/virus231/tech-stack/compare/v1.0.4...v1.1.0-beta.1) (2025-09-16)
 
 ### ✨ Features
