@@ -41,6 +41,7 @@ jobs:
         run: |
           cd backend
           pnpm install
+          pnpm prisma:generate
 
       - name: Install frontend dependencies
         run: |
