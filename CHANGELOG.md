@@ -1,3 +1,9 @@
+## [1.1.0-beta.8](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.7...v1.1.0-beta.8) (2025-09-16)
+
+### 🐛 Bug Fixes
+
+* api path url ([492e246](https://github.com/virus231/tech-stack/commit/492e2461c6fc095242c49002109837615df35308))
+
 ## [1.1.0-beta.7](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.6...v1.1.0-beta.7) (2025-09-16)
 
 ### 🐛 Bug Fixes
