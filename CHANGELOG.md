@@ -1,3 +1,13 @@
+## [1.1.0-beta.1](https://github.com/virus231/tech-stack/compare/v1.0.4...v1.1.0-beta.1) (2025-09-16)
+
+### ✨ Features
+
+* database init ([e160fac](https://github.com/virus231/tech-stack/commit/e160fac0ab056e27d72b0097dc3729194a8ef40c))
+
+### 🐛 Bug Fixes
+
+* vercel config ([38e8c87](https://github.com/virus231/tech-stack/commit/38e8c87000bd28867fb8596ca6515de2e0ae32ee))
+
 ## [1.0.4](https://github.com/virus231/tech-stack/compare/v1.0.3...v1.0.4) (2025-09-16)
 
 ### 🐛 Bug Fixes
