@@ -3,6 +3,7 @@ import cors from "cors";
 import express, { type Express } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+import authRoutes from "@/routes/auth";
 
 const app: Express = express();
 
@@ -32,6 +33,9 @@ app.get("/health", (_req, res) => {
     environment: config.nodeEnv,
   });
 });
+
+// Auth routes
+app.use("/auth", authRoutes);
 
 // API routes
 app.use("/api", (_req, res) => {
