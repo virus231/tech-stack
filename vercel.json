@@ -7,18 +7,9 @@
     },
     {
       "src": "backend/api/index.ts",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": "backend/{src,prisma,tsconfig.json}/**",
-        "maxLambdaSize": "50mb"
-      }
+      "use": "@vercel/node"
     }
   ],
-  "functions": {
-    "backend/api/index.ts": {
-      "includeFiles": "backend/{src,prisma}/**"
-    }
-  },
   "routes": [
     {
       "src": "/api/(.*)",
