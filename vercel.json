@@ -9,7 +9,7 @@
       "src": "backend/api/index.ts",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": "backend/src/**",
+        "includeFiles": "backend/{src,prisma,tsconfig.json}/**",
         "maxLambdaSize": "50mb"
       }
     }
