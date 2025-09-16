@@ -1,3 +1,9 @@
+## [1.1.0-beta.3](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2025-09-16)
+
+### ✨ Features
+
+* connect full Express app to Vercel for production auth ([81a9534](https://github.com/virus231/tech-stack/commit/81a953462b343fba7cfd4c4e4d2c181394f06bf3))
+
 ## [1.1.0-beta.2](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2025-09-16)
 
 ### ✨ Features
