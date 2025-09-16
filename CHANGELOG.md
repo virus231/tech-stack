@@ -1,3 +1,9 @@
+## [1.0.0-beta.2](https://github.com/virus231/tech-stack/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2025-09-16)
+
+### ✨ Features
+
+* add Vercel deployment configuration ([27ed269](https://github.com/virus231/tech-stack/commit/27ed269e88f759e76e19bd8a238a403e825c1010))
+
 ## 1.0.0-beta.1 (2025-09-16)
 
 ### ✨ Features
