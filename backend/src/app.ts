@@ -1,10 +1,10 @@
-import express from 'express';
+import express, { Application } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { config } from '@/config/config';
 
-const app = express();
+const app: Application = express();
 
 // Security middleware
 app.use(helmet());
@@ -23,7 +23,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/health', (_req, res) => {
   res.status(200).json({
     status: 'OK',
     timestamp: new Date().toISOString(),
@@ -32,7 +32,7 @@ app.get('/health', (req, res) => {
 });
 
 // API routes
-app.use('/api', (req, res) => {
+app.use('/api', (_req, res) => {
   res.json({ message: 'API is working' });
 });
 
@@ -45,7 +45,7 @@ app.use((req, res) => {
 });
 
 // Global error handler
-app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
   console.error('Error:', err);
   
   res.status(500).json({
