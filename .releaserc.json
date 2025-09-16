@@ -7,7 +7,6 @@
       "prerelease": "beta"
     }
   ],
-  "repositoryUrl": "https://github.com/your-username/tech-test",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
