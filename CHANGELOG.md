@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/virus231/tech-stack/compare/v1.0.2...v1.0.3) (2025-09-16)
+
+### 🐛 Bug Fixes
+
+* build errors ([3bc9330](https://github.com/virus231/tech-stack/commit/3bc93306569646c43b9b423df532418270eba82b))
+
 ## [1.0.2](https://github.com/virus231/tech-stack/compare/v1.0.1...v1.0.2) (2025-09-16)
 
 ### 🐛 Bug Fixes
