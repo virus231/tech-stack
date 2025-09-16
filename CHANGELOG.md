@@ -1,3 +1,9 @@
+## [1.1.0-beta.4](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.3...v1.1.0-beta.4) (2025-09-16)
+
+### 🚨 Tests
+
+* api request ([7b46172](https://github.com/virus231/tech-stack/commit/7b4617253321b0b65d8def99d0c66957d4c94eb3))
+
 ## [1.1.0-beta.3](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2025-09-16)
 
 ### ✨ Features
