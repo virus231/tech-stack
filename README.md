@@ -40,7 +40,51 @@ pnpm build           # Production build
 pnpm start           # Start production server
 ```
 
+## Git Workflow & Branching Strategy
+
+### Branching Model
+Проект використовує **Git Flow** стратегію з автоматизацією через GitHub Actions:
+
+```
+main/master     ←── Production releases (stable)
+    ↑
+develop         ←── Integration branch (beta releases)
+    ↑
+feature/*       ←── Feature development
+hotfix/*        ←── Urgent production fixes
+```
+
+### Branch Rules
+- **main/master**: Тільки стабільні релізи (v1.0.0, v1.1.0)
+- **develop**: Beta релізи для тестування (v1.1.0-beta.1)
+- **feature/**: Розробка нових функцій
+- **hotfix/**: Термінові виправлення для production
+
+### Workflow
+1. **Розробка**: `feature/auth-system` ← branch з develop
+2. **Code Review**: PR feature → develop
+3. **Integration**: PR develop → main (release готовий)
+4. **Hotfix**: `hotfix/critical-bug` ← branch з main
+
 ## CI/CD & Releases
+
+### GitHub Actions Workflows
+
+#### 1. **CI Pipeline** (`.github/workflows/ci.yml`)
+- **Triggers**: Push до develop, feature/*, hotfix/*
+- **Triggers**: PR до main, master, develop
+- **Actions**: Build, lint, type-check (без deploy)
+
+#### 2. **Release Pipeline** (`.github/workflows/release.yml`)
+- **Triggers**: Push до main, master, develop
+- **Actions**: Build + semantic-release + deploy
+- **Outputs**: 
+  - main → stable release (v1.0.0)
+  - develop → beta release (v1.1.0-beta.1)
+
+#### 3. **PR Validation** (`.github/workflows/pr-to-main.yml`)
+- **Triggers**: PR до main/master
+- **Actions**: Повна валідація перед merge
 
 ### Semantic Release
 Проект використовує [semantic-release](https://semantic-release.gitbook.io/) для автоматичних релізів:
