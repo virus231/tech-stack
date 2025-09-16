@@ -1,3 +1,9 @@
+## [1.0.5](https://github.com/virus231/tech-stack/compare/v1.0.4...v1.0.5) (2025-09-16)
+
+### 🐛 Bug Fixes
+
+* vercel config ([38e8c87](https://github.com/virus231/tech-stack/commit/38e8c87000bd28867fb8596ca6515de2e0ae32ee))
+
 ## [1.0.4](https://github.com/virus231/tech-stack/compare/v1.0.3...v1.0.4) (2025-09-16)
 
 ### 🐛 Bug Fixes
