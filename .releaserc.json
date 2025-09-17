@@ -115,16 +115,9 @@
     [
       "@semantic-release/github",
       {
-        "assets": [
-          {
-            "path": "backend/dist/**/*",
-            "label": "Backend Build"
-          },
-          {
-            "path": "frontend/dist/**/*",
-            "label": "Frontend Build"
-          }
-        ]
+        "failComment": false,
+        "failTitle": false,
+        "successComment": false
       }
     ],
     [

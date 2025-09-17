@@ -1,8 +1,11 @@
-import { config } from "@/config/config";
+import { config } from "./config/config";
 import cors from "cors";
 import express, { type Express } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+import authRoutes from "./routes/auth";
+import postsRoutes from "./routes/posts";
+import usersRoutes from "./routes/users";
 
 const app: Express = express();
 
@@ -25,13 +28,22 @@ app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
 // Health check endpoint
-app.get("/health", (_req, res) => {
+app.get("/api/health", (_req, res) => {
   res.status(200).json({
     status: "OK",
     timestamp: new Date().toISOString(),
     environment: config.nodeEnv,
   });
 });
+
+// Auth routes
+app.use("/api/auth", authRoutes);
+
+// Posts routes
+app.use("/api/posts", postsRoutes);
+
+// Users routes
+app.use("/api/users", usersRoutes);
 
 // API routes
 app.use("/api", (_req, res) => {

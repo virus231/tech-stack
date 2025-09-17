@@ -1,4 +1,132 @@
-## [1.0.5](https://github.com/virus231/tech-stack/compare/v1.0.4...v1.0.5) (2025-09-16)
+## [1.1.0-beta.22](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.21...v1.1.0-beta.22) (2025-09-17)
+
+### ♻️ Chores
+
+* **release:** 1.0.5 [skip ci] ([6a443fa](https://github.com/virus231/tech-stack/commit/6a443fa4447ee42a9dd1a67d88fcd42e84f0ee35))
+
+## [1.1.0-beta.20](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.19...v1.1.0-beta.20) (2025-09-17)
+
+### ✨ Features
+
+* edit post ([13806c2](https://github.com/virus231/tech-stack/commit/13806c2e19582b013425193cda25b157d8eaf245))
+
+## [1.1.0-beta.19](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.18...v1.1.0-beta.19) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* static post page ([f56e590](https://github.com/virus231/tech-stack/commit/f56e5907f80bf419c9df3c5f759e4decc9be1b5f))
+
+## [1.1.0-beta.18](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.17...v1.1.0-beta.18) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* error page promiseo ([341c60f](https://github.com/virus231/tech-stack/commit/341c60fc61a9b059eb837e1be40767201434045a))
+
+## [1.1.0-beta.17](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.16...v1.1.0-beta.17) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* error env var ([571e00b](https://github.com/virus231/tech-stack/commit/571e00b96548769d4a31f5e032cabcdf693607a5))
+
+## [1.1.0-beta.16](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.15...v1.1.0-beta.16) (2025-09-17)
+
+### ✨ Features
+
+* improvements ([2a4a28e](https://github.com/virus231/tech-stack/commit/2a4a28ee691617ca08f39362d5b36bc2be8ca5ed))
+
+## [1.1.0-beta.15](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.14...v1.1.0-beta.15) (2025-09-17)
+
+### ✨ Features
+
+* create post form ([43ef77c](https://github.com/virus231/tech-stack/commit/43ef77cf433bbf5f787ba0a8f1a6f65fe08c501e))
+
+## [1.1.0-beta.14](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.13...v1.1.0-beta.14) (2025-09-17)
+
+### ✨ Features
+
+* posts ui CRUD ([dab04b3](https://github.com/virus231/tech-stack/commit/dab04b3e1c4e2a5c361609f09b4acb4956ad9924))
+
+## [1.1.0-beta.13](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.12...v1.1.0-beta.13) (2025-09-17)
+
+### ✨ Features
+
+* shadcn setup, auth setup with tanstack query and axios ([d2b9ce5](https://github.com/virus231/tech-stack/commit/d2b9ce5002917ea1f25dc1b0332c587cb49b703f))
+
+## [1.1.0-beta.12](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.11...v1.1.0-beta.12) (2025-09-17)
+
+### ✨ Features
+
+* users api ([fab05d5](https://github.com/virus231/tech-stack/commit/fab05d5bedea427442a8cc78d384f0e25d1a1cf0))
+
+## [1.1.0-beta.11](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.10...v1.1.0-beta.11) (2025-09-17)
+
+### ✨ Features
+
+* posts api ([f97fad7](https://github.com/virus231/tech-stack/commit/f97fad778935223a4392c8fd7a513c3580700056))
+
+## [1.1.0-beta.10](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.9...v1.1.0-beta.10) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* releaser config ([e315985](https://github.com/virus231/tech-stack/commit/e3159854bdf33b155920a3a36b95c8ca1f15eadc))
+
+## [1.1.0-beta.9](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.8...v1.1.0-beta.9) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* change folder ([58aa7b0](https://github.com/virus231/tech-stack/commit/58aa7b03a8e4fd7e465a5b3ebce5d3cdae5ce4ac))
+
+## [1.1.0-beta.8](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.7...v1.1.0-beta.8) (2025-09-16)
+
+### 🐛 Bug Fixes
+
+* api path url ([492e246](https://github.com/virus231/tech-stack/commit/492e2461c6fc095242c49002109837615df35308))
+
+## [1.1.0-beta.7](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.6...v1.1.0-beta.7) (2025-09-16)
+
+### 🐛 Bug Fixes
+
+* api ([6ff87b1](https://github.com/virus231/tech-stack/commit/6ff87b174ce711deca43853a879458d72943a6d3))
+
+## [1.1.0-beta.6](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.5...v1.1.0-beta.6) (2025-09-16)
+
+### 🚨 Tests
+
+* fix api ([2f641b5](https://github.com/virus231/tech-stack/commit/2f641b5a3ee320a1dc72594459c52382088d15a8))
+
+## [1.1.0-beta.5](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.4...v1.1.0-beta.5) (2025-09-16)
+
+### 🚨 Tests
+
+* fix api ([28c4ae3](https://github.com/virus231/tech-stack/commit/28c4ae364c1ef8ec09f65b83cb63ecf17ba15dca))
+
+## [1.1.0-beta.4](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.3...v1.1.0-beta.4) (2025-09-16)
+
+### 🚨 Tests
+
+* api request ([7b46172](https://github.com/virus231/tech-stack/commit/7b4617253321b0b65d8def99d0c66957d4c94eb3))
+
+## [1.1.0-beta.3](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2025-09-16)
+
+### ✨ Features
+
+* connect full Express app to Vercel for production auth ([81a9534](https://github.com/virus231/tech-stack/commit/81a953462b343fba7cfd4c4e4d2c181394f06bf3))
+
+## [1.1.0-beta.2](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2025-09-16)
+
+### ✨ Features
+
+* auth endpoints ([acefc83](https://github.com/virus231/tech-stack/commit/acefc83ea98a610d05f633845ac5ae51653c761c))
+
+### 🐛 Bug Fixes
+
+* type errors ([d4156b4](https://github.com/virus231/tech-stack/commit/d4156b47ee468b7ae2e352ff8767512a1204c51b))
+
+## [1.1.0-beta.1](https://github.com/virus231/tech-stack/compare/v1.0.4...v1.1.0-beta.1) (2025-09-16)
+
+### ✨ Features
+
+* database init ([e160fac](https://github.com/virus231/tech-stack/commit/e160fac0ab056e27d72b0097dc3729194a8ef40c))
 
 ### 🐛 Bug Fixes
 

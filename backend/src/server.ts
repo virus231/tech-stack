@@ -1,6 +1,6 @@
 import app from './app';
-import { config } from '@/config/config';
-import { prisma } from '@/config/database';
+import { config } from './config/config';
+import { prisma } from './config/database';
 
 const startServer = async () => {
   try {
