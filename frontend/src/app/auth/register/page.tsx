@@ -21,7 +21,6 @@ const registerSchema = z.object({
   email: z.string().email('Введіть правильний email'),
   password: z.string().min(6, 'Пароль повинен містити мінімум 6 символів'),
   confirmPassword: z.string().min(6, 'Підтвердження пароля обов\'язкове'),
-  name: z.string().min(2, 'Ім\'я повинно містити мінімум 2 символи').optional().or(z.literal('')),
 }).refine((data) => data.password === data.confirmPassword, {
   message: 'Паролі не співпадають',
   path: ['confirmPassword'],
@@ -41,7 +40,6 @@ export default function RegisterPage() {
       email: '',
       password: '',
       confirmPassword: '',
-      name: '',
     },
   });
 
@@ -58,7 +56,6 @@ export default function RegisterPage() {
       const registerData = {
         email: data.email,
         password: data.password,
-        name: data.name || undefined,
       };
       await registerMutation.mutateAsync(registerData);
     } catch (err: any) {
@@ -91,24 +88,6 @@ export default function RegisterPage() {
         <CardContent>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Ім'я (опціонально)</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="text"
-                        placeholder="Ваше ім'я"
-                        {...field}
-                        disabled={registerMutation.isPending}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
               <FormField
                 control={form.control}
                 name="email"
