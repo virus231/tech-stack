@@ -1,3 +1,9 @@
+## [1.1.0-beta.14](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.13...v1.1.0-beta.14) (2025-09-17)
+
+### ✨ Features
+
+* posts ui CRUD ([dab04b3](https://github.com/virus231/tech-stack/commit/dab04b3e1c4e2a5c361609f09b4acb4956ad9924))
+
 ## [1.1.0-beta.13](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.12...v1.1.0-beta.13) (2025-09-17)
 
 ### ✨ Features
