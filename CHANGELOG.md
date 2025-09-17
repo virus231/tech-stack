@@ -1,3 +1,9 @@
+## [1.1.0-beta.13](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.12...v1.1.0-beta.13) (2025-09-17)
+
+### ✨ Features
+
+* shadcn setup, auth setup with tanstack query and axios ([d2b9ce5](https://github.com/virus231/tech-stack/commit/d2b9ce5002917ea1f25dc1b0332c587cb49b703f))
+
 ## [1.1.0-beta.12](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.11...v1.1.0-beta.12) (2025-09-17)
 
 ### ✨ Features
