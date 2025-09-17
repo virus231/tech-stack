@@ -1,3 +1,9 @@
+## [1.1.0-beta.15](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.14...v1.1.0-beta.15) (2025-09-17)
+
+### ✨ Features
+
+* create post form ([43ef77c](https://github.com/virus231/tech-stack/commit/43ef77cf433bbf5f787ba0a8f1a6f65fe08c501e))
+
 ## [1.1.0-beta.14](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.13...v1.1.0-beta.14) (2025-09-17)
 
 ### ✨ Features
