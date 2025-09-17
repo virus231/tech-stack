@@ -1,3 +1,9 @@
+## [1.1.0-beta.9](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.8...v1.1.0-beta.9) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* change folder ([58aa7b0](https://github.com/virus231/tech-stack/commit/58aa7b03a8e4fd7e465a5b3ebce5d3cdae5ce4ac))
+
 ## [1.1.0-beta.8](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.7...v1.1.0-beta.8) (2025-09-16)
 
 ### 🐛 Bug Fixes
