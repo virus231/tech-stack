@@ -1,3 +1,9 @@
+## [1.1.0-beta.11](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.10...v1.1.0-beta.11) (2025-09-17)
+
+### ✨ Features
+
+* posts api ([f97fad7](https://github.com/virus231/tech-stack/commit/f97fad778935223a4392c8fd7a513c3580700056))
+
 ## [1.1.0-beta.10](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.9...v1.1.0-beta.10) (2025-09-17)
 
 ### 🐛 Bug Fixes
