@@ -1,3 +1,9 @@
+## [1.1.0-beta.20](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.19...v1.1.0-beta.20) (2025-09-17)
+
+### ✨ Features
+
+* edit post ([13806c2](https://github.com/virus231/tech-stack/commit/13806c2e19582b013425193cda25b157d8eaf245))
+
 ## [1.1.0-beta.19](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.18...v1.1.0-beta.19) (2025-09-17)
 
 ### 🐛 Bug Fixes
