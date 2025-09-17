@@ -1,3 +1,9 @@
+## [1.1.0-beta.12](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.11...v1.1.0-beta.12) (2025-09-17)
+
+### ✨ Features
+
+* users api ([fab05d5](https://github.com/virus231/tech-stack/commit/fab05d5bedea427442a8cc78d384f0e25d1a1cf0))
+
 ## [1.1.0-beta.11](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.10...v1.1.0-beta.11) (2025-09-17)
 
 ### ✨ Features
