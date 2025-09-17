@@ -1,3 +1,9 @@
+## [1.1.0-beta.18](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.17...v1.1.0-beta.18) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* error page promiseo ([341c60f](https://github.com/virus231/tech-stack/commit/341c60fc61a9b059eb837e1be40767201434045a))
+
 ## [1.1.0-beta.17](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.16...v1.1.0-beta.17) (2025-09-17)
 
 ### 🐛 Bug Fixes
