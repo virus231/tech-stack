@@ -4,6 +4,7 @@ import express, { type Express } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 import authRoutes from "./routes/auth";
+import postsRoutes from "./routes/posts";
 
 const app: Express = express();
 
@@ -36,6 +37,9 @@ app.get("/api/health", (_req, res) => {
 
 // Auth routes
 app.use("/api/auth", authRoutes);
+
+// Posts routes
+app.use("/api/posts", postsRoutes);
 
 // API routes
 app.use("/api", (_req, res) => {
