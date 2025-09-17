@@ -1,3 +1,9 @@
+## [1.1.0-beta.19](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.18...v1.1.0-beta.19) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* static post page ([f56e590](https://github.com/virus231/tech-stack/commit/f56e5907f80bf419c9df3c5f759e4decc9be1b5f))
+
 ## [1.1.0-beta.18](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.17...v1.1.0-beta.18) (2025-09-17)
 
 ### 🐛 Bug Fixes
