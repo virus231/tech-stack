@@ -1,3 +1,9 @@
+## [1.1.0-beta.22](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.21...v1.1.0-beta.22) (2025-09-17)
+
+### ♻️ Chores
+
+* **release:** 1.0.5 [skip ci] ([6a443fa](https://github.com/virus231/tech-stack/commit/6a443fa4447ee42a9dd1a67d88fcd42e84f0ee35))
+
 ## [1.1.0-beta.20](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.19...v1.1.0-beta.20) (2025-09-17)
 
 ### ✨ Features
