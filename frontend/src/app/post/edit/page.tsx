@@ -2,16 +2,19 @@
 
 import { useAuth } from '@/contexts/auth-context';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, Suspense } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 import { useLogout } from '@/hooks/use-auth';
 import { usePost } from '@/hooks/use-posts';
-import { formatDistanceToNow, format } from 'date-fns';
-import { uk } from 'date-fns/locale';
-import { ArrowLeft, Calendar, User } from 'lucide-react';
+import { api } from '@/lib/api';
+import { ArrowLeft } from 'lucide-react';
+import { toast } from 'sonner';
 
-function PostPageContent() {
+function EditPostContent() {
   const { isAuthenticated, isLoading, user } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -21,6 +24,13 @@ function PostPageContent() {
   const postId = postIdParam ? parseInt(postIdParam, 10) : null;
   
   const { data: post, isLoading: postLoading, error: postError } = usePost(postId || 0);
+  
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    content: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
@@ -34,6 +44,39 @@ function PostPageContent() {
     }
   }, [postIdParam, router]);
 
+  useEffect(() => {
+    if (post) {
+      // Перевірка, чи користувач є автором поста
+      if (user?.id !== post.author.id) {
+        toast.error('Ви можете редагувати тільки свої пости');
+        router.push(`/post?post_id=${post.id}`);
+        return;
+      }
+      
+      setFormData({
+        title: post.title,
+        description: post.description || '',
+        content: post.content
+      });
+    }
+  }, [post, user, router]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!postId) return;
+
+    setIsSubmitting(true);
+    try {
+      await api.put(`/posts/${postId}`, formData);
+      toast.success('Пост успішно оновлено!');
+      router.push(`/post?post_id=${postId}`);
+    } catch (error: any) {
+      toast.error(error.response?.data?.message || 'Помилка при оновленні поста');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   if (isLoading || postLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -42,18 +85,13 @@ function PostPageContent() {
     );
   }
 
-  if (!isAuthenticated) {
-    return null; // Will redirect
-  }
-
-  if (!postIdParam || !postId) {
+  if (!isAuthenticated || !postIdParam || !postId) {
     return null; // Will redirect
   }
 
   if (postError) {
     return (
       <div className="min-h-screen bg-gray-50">
-        {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
@@ -117,12 +155,13 @@ function PostPageContent() {
                 Міні-блог
               </Button>
               <span className="text-gray-400">|</span>
-              <span className="text-gray-600">Пост</span>
+              <span className="text-gray-600">Редагування поста</span>
             </div>
             <div className="flex items-center space-x-4">
               <Button 
                 onClick={() => router.push('/posts/create')}
                 size="sm"
+                variant="outline"
               >
                 Створити пост
               </Button>
@@ -150,123 +189,92 @@ function PostPageContent() {
         <div className="mb-6">
           <Button 
             variant="ghost" 
-            onClick={() => router.push('/posts')}
+            onClick={() => router.push(`/post?post_id=${post.id}`)}
             className="text-gray-600 hover:text-gray-900"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Повернутися до списку постів
+            Повернутися до поста
           </Button>
         </div>
 
-        {/* Post Content */}
-        <article className="bg-white rounded-lg shadow-sm border">
-          {/* Post Header */}
-          <header className="p-6 border-b">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
-              {post.title}
-            </h1>
-            
-            {post.description && (
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                {post.description}
-              </p>
-            )}
+        {/* Edit Form */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Редагувати пост</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="title">Заголовок *</Label>
+                <Input
+                  id="title"
+                  type="text"
+                  value={formData.title}
+                  onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
+                  placeholder="Введіть заголовок поста..."
+                  required
+                  className="w-full"
+                />
+              </div>
 
-            {/* Post Meta */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm text-gray-500 space-y-2 sm:space-y-0">
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center">
-                  <User className="w-4 h-4 mr-1" />
-                  <span className="font-medium">
-                    {post.author.name || post.author.email}
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  <span>
-                    {format(new Date(post.createdAt), 'dd MMMM yyyy, HH:mm', { locale: uk })}
-                  </span>
-                </div>
+              <div className="space-y-2">
+                <Label htmlFor="description">Короткий опис</Label>
+                <Input
+                  id="description"
+                  type="text"
+                  value={formData.description}
+                  onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
+                  placeholder="Введіть короткий опис поста (необов'язково)..."
+                  className="w-full"
+                />
               </div>
-              <div className="text-gray-400">
-                {formatDistanceToNow(new Date(post.createdAt), { 
-                  addSuffix: true, 
-                  locale: uk 
-                })}
-              </div>
-            </div>
-          </header>
 
-          {/* Post Body */}
-          <div className="p-6">
-            <div className="prose prose-gray max-w-none">
-              <div className="whitespace-pre-wrap text-gray-700 leading-relaxed text-lg">
-                {post.content}
+              <div className="space-y-2">
+                <Label htmlFor="content">Зміст *</Label>
+                <Textarea
+                  id="content"
+                  value={formData.content}
+                  onChange={(e) => setFormData(prev => ({ ...prev, content: e.target.value }))}
+                  placeholder="Введіть зміст поста..."
+                  required
+                  rows={12}
+                  className="w-full resize-vertical"
+                />
               </div>
-            </div>
-          </div>
 
-          {/* Post Footer */}
-          <footer className="p-6 border-t bg-gray-50">
-            <div className="flex justify-between items-center">
-              <div className="text-sm text-gray-500">
-                {post.updatedAt !== post.createdAt && (
-                  <span>
-                    Оновлено {formatDistanceToNow(new Date(post.updatedAt), { 
-                      addSuffix: true, 
-                      locale: uk 
-                    })}
-                  </span>
-                )}
-              </div>
-              <div className="flex space-x-2">
+              <div className="flex gap-4 pt-4">
                 <Button 
-                  variant="outline" 
-                  onClick={() => router.push('/posts')}
+                  type="submit" 
+                  disabled={isSubmitting || !formData.title.trim() || !formData.content.trim()}
+                  className="flex-1"
                 >
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Назад до списку
+                  {isSubmitting ? 'Оновлення...' : 'Оновити пост'}
                 </Button>
-                {user?.id === post.author.id && (
-                  <Button 
-                    variant="outline"
-                    onClick={() => router.push(`/post/edit?post_id=${post.id}`)}
-                  >
-                    Редагувати
-                  </Button>
-                )}
+                <Button 
+                  type="button" 
+                  variant="outline"
+                  onClick={() => router.push(`/post?post_id=${post.id}`)}
+                  className="flex-1"
+                >
+                  Скасувати
+                </Button>
               </div>
-            </div>
-          </footer>
-        </article>
-
-        {/* Related Actions */}
-        <div className="mt-8 text-center">
-          <div className="space-x-4">
-            <Button onClick={() => router.push('/posts/create')}>
-              Написати новий пост
-            </Button>
-            <Button 
-              variant="outline" 
-              onClick={() => router.push('/posts')}
-            >
-              Переглянути інші пости
-            </Button>
-          </div>
-        </div>
+            </form>
+          </CardContent>
+        </Card>
       </main>
     </div>
   );
 }
 
-export default function PostPage() {
+export default function EditPostPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
       </div>
     }>
-      <PostPageContent />
+      <EditPostContent />
     </Suspense>
   );
 }
