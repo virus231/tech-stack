@@ -39,7 +39,7 @@ export function useCreatePost() {
       queryClient.invalidateQueries({ queryKey: ['posts'] });
       
       // Navigate to the new post
-      router.push(`/posts/${newPost.id}`);
+      router.push(`/post?post_id=${newPost.id}`);
     },
     onError: (error: any) => {
       console.error('Create post error:', error.response?.data || error.message);

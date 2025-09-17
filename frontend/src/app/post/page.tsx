@@ -1,8 +1,8 @@
 'use client';
 
 import { useAuth } from '@/contexts/auth-context';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLogout } from '@/hooks/use-auth';
@@ -11,22 +11,28 @@ import { formatDistanceToNow, format } from 'date-fns';
 import { uk } from 'date-fns/locale';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 
-interface PostDetailClientProps {
-  id: string;
-}
-
-export default function PostDetailClient({ id }: PostDetailClientProps) {
+function PostPageContent() {
   const { isAuthenticated, isLoading, user } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const logout = useLogout();
-  const postId = parseInt(id, 10);
-  const { data: post, isLoading: postLoading, error: postError } = usePost(postId);
+  
+  const postIdParam = searchParams.get('post_id');
+  const postId = postIdParam ? parseInt(postIdParam, 10) : null;
+  
+  const { data: post, isLoading: postLoading, error: postError } = usePost(postId || 0);
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
       router.push('/auth/login');
     }
   }, [isAuthenticated, isLoading, router]);
+
+  useEffect(() => {
+    if (!postIdParam) {
+      router.push('/posts');
+    }
+  }, [postIdParam, router]);
 
   if (isLoading || postLoading) {
     return (
@@ -37,6 +43,10 @@ export default function PostDetailClient({ id }: PostDetailClientProps) {
   }
 
   if (!isAuthenticated) {
+    return null; // Will redirect
+  }
+
+  if (!postIdParam || !postId) {
     return null; // Will redirect
   }
 
@@ -220,7 +230,7 @@ export default function PostDetailClient({ id }: PostDetailClientProps) {
                 {user?.id === post.author.id && (
                   <Button 
                     variant="outline"
-                    onClick={() => router.push(`/posts/${post.id}/edit`)}
+                    onClick={() => router.push(`/post?post_id=${post.id}&edit=true`)}
                   >
                     Редагувати
                   </Button>
@@ -246,5 +256,17 @@ export default function PostDetailClient({ id }: PostDetailClientProps) {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function PostPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+    }>
+      <PostPageContent />
+    </Suspense>
   );
 }

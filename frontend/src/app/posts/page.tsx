@@ -98,7 +98,7 @@ export default function PostsPage() {
             <Card 
               key={post.id} 
               className="hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02]"
-              onClick={() => router.push(`/posts/${post.id}`)}
+              onClick={() => router.push(`/post?post_id=${post.id}`)}
             >
               <CardHeader className="pb-4">
                 <CardTitle className="line-clamp-2 text-lg leading-tight">
@@ -133,7 +133,7 @@ export default function PostsPage() {
                   size="sm"
                   onClick={(e) => {
                     e.stopPropagation();
-                    router.push(`/posts/${post.id}`);
+                    router.push(`/post?post_id=${post.id}`);
                   }}
                   className="text-xs hover:text-primary"
                 >
