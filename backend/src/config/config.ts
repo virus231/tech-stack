@@ -24,7 +24,7 @@ export const config: Config = {
 };
 
 // Validate required environment variables
-const requiredEnvVars = ["DATABASE_URL"];
+const requiredEnvVars = ["DATABASE_URL", "JWT_SECRET"];
 
 for (const envVar of requiredEnvVars) {
   if (!process.env[envVar]) {
