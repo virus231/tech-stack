@@ -3,6 +3,11 @@ import axios from 'axios';
 // API base URL - update this to match your backend
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
+// Debug: log the API URL in development
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+  console.log('API_BASE_URL:', API_BASE_URL);
+}
+
 // Create axios instance
 export const api = axios.create({
   baseURL: API_BASE_URL,

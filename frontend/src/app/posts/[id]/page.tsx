@@ -17,6 +17,7 @@ interface PostDetailPageProps {
   };
 }
 
+
 export default function PostDetailPage({ params }: PostDetailPageProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   const router = useRouter();

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/posts/:id",
+      "destination": "/posts/[id]"
+    }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["fra1"]
+}
