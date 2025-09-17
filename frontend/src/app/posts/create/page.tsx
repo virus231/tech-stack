@@ -150,8 +150,8 @@ export default function CreatePostPage() {
         </div>
 
         {/* Tips */}
-        <Card className="mt-6 bg-blue-50 border-blue-200">
-          <CardContent className="pt-6">
+        <Card className="mt-6 bg-blue-50 border-blue-200 mb-2">
+          <CardContent>
             <h3 className="font-medium text-blue-900 mb-2">
               Поради для написання хорошого поста:
             </h3>
