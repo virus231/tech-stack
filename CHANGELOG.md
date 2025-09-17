@@ -1,3 +1,9 @@
+## [1.1.0-beta.17](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.16...v1.1.0-beta.17) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* error env var ([571e00b](https://github.com/virus231/tech-stack/commit/571e00b96548769d4a31f5e032cabcdf693607a5))
+
 ## [1.1.0-beta.16](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.15...v1.1.0-beta.16) (2025-09-17)
 
 ### ✨ Features
