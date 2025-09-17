@@ -1,3 +1,9 @@
+## [1.1.0-beta.10](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.9...v1.1.0-beta.10) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* releaser config ([e315985](https://github.com/virus231/tech-stack/commit/e3159854bdf33b155920a3a36b95c8ca1f15eadc))
+
 ## [1.1.0-beta.9](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.8...v1.1.0-beta.9) (2025-09-17)
 
 ### 🐛 Bug Fixes
