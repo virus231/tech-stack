@@ -1,3 +1,9 @@
+## [1.1.0-beta.21](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.20...v1.1.0-beta.21) (2025-09-17)
+
+### 🐛 Bug Fixes
+
+* ui space ([c331e43](https://github.com/virus231/tech-stack/commit/c331e4347e7ca5c96709b28ab0c70ec92564ecb7))
+
 ## [1.1.0-beta.20](https://github.com/virus231/tech-stack/compare/v1.1.0-beta.19...v1.1.0-beta.20) (2025-09-17)
 
 ### ✨ Features
