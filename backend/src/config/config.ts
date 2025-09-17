@@ -24,10 +24,15 @@ export const config: Config = {
 };
 
 // Validate required environment variables
-const requiredEnvVars = ["DATABASE_URL", "JWT_SECRET"];
+const requiredEnvVars = ["DATABASE_URL"];
 
 for (const envVar of requiredEnvVars) {
   if (!process.env[envVar]) {
     throw new Error(`Missing required environment variable: ${envVar}`);
   }
+}
+
+// Warn if using fallback JWT secret in production
+if (!process.env.JWT_SECRET && config.nodeEnv === "production") {
+  console.warn("⚠️  Warning: Using fallback JWT secret in production! Please set JWT_SECRET environment variable.");
 }
